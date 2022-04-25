@@ -1,0 +1,66 @@
+@font-face {
+    font-family:'Ubuntu';
+    src: url('res/Ubuntu-R.ttf');
+}
+
+body {
+  background-color:black;
+  background-image: url("res/bg_tile.jpg");
+  background-repeat: repeat;
+  text-align: center;
+  font-family: Ubuntu;
+  color: floralwhite; // Not sure if floralwhite or mintcream
+}
+
+th, td {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+table {
+  border: 1px solid transparent;
+  margin: 10px;
+  display:inline-block;
+  vertical-align:top;
+}
+
+a, a:visited {
+  color: floralwhite;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  font-style: italic;
+}
+
+.index {
+  padding-bottom: 15px;
+}
+
+.bottom {
+  color: dimgrey;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.75em;
+  padding-top: 30px;
+}
+
+.guts {
+  color: black;
+  background-color: floralwhite;
+  font-size: 0.8em;
+}
+
+.header {
+  font-size: 1em;
+}
+
+.year {
+  font-size: 1.5em;
+}
