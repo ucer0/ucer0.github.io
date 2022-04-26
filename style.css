@@ -24,15 +24,23 @@ th, td {
   padding-right: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
-}
-/*
-tr:nth-child(even) {
-  background-color: Aliceblue;
+
 }
 
-tr:nth-child(odd) {
-  background-color: mintcream;
-}*/
+td, tr:not(.header):not(.year):not(.aux):not(.frontPage) {
+  color: black;
+  font-size: 0.9em;
+
+}
+
+tr:nth-child(even):not(.header):not(.frontPage) {
+  background-color: floralwhite;
+}
+
+tr:nth-child(odd):not(.year):not(.aux):not(.frontPage) {
+  background-color: #fff1d8;
+  //background-color: #fff5e0;
+}
 
 h2 {
   margin-bottom: 5px;
@@ -49,17 +57,6 @@ a:hover, a:focus, a:active {
 
 .index {
   padding-bottom: 15px;
-}
-
-.guts {
-  color: black;
-  background-color: floralwhite;
-  font-size: 0.9em;
-}
-
-.header {
-  font-size: 1em;
-  background-color: black;
 }
 
 .year {
