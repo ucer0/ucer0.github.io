@@ -32,11 +32,11 @@ td, tr:not(.header):not(.year):not(.aux):not(.frontPage) {
 
 }
 
-tr:nth-child(even):not(.header):not(.frontPage) {
+tr:nth-child(even):not(.header):not(.aux):not(.frontPage) {
   background-color: floralwhite;
 }
 
-tr:nth-child(odd):not(.year):not(.aux):not(.frontPage) {
+tr:nth-child(odd):not(.year):not(.aux):not(.frontPage):not(.header) {
   background-color: #fff1d8;
   //background-color: #fff5e0;
 }
@@ -60,4 +60,23 @@ a:hover, a:focus, a:active {
 
 .year {
   font-size: 1.5em;
+}
+
+.frontPage {
+  font-size: 2em;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.update {
+  font-size: 0.6em;
+  opacity: 0.1;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%);
 }
