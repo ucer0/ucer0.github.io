@@ -1,10 +1,7 @@
 /* I don't know CSS*/
 @font-face {
     font-family:'Ubuntu';
-    /*src: url('res/Ubuntu-R.ttf');*/
-    font-style: normal;
-    font-weight: 400;
-    src: url(http://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+    src: url('res/Ubuntu-R.ttf');
 }
 
 body {
