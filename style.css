@@ -1,16 +1,13 @@
 /* I don't know CSS*/
-@font-face {
-    font-family:'Ubuntu';
-    src: url('res/Ubuntu-R.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu;1&display=swap');
 
 body {
   background-color:black;
   background-image: url("res/bg_tile.jpg");
   background-repeat: repeat;
   text-align: center;
-  font-family: Ubuntu;
-  color: floralwhite; // Not sure if floralwhite or mintcream
+  font-family: 'Ubuntu', sans-serif;
+  color: floralwhite; /*Not sure if floralwhite or mintcream*/
 }
 
 table {
@@ -27,6 +24,10 @@ th, td {
   padding-bottom: 5px;
 }
 
+th:empty, td:empty {
+  visibility: hidden;
+}
+
 td, tr:not(.header):not(.year):not(.aux):not(.frontPage) {
   color: black;
   font-size: 0.9em;
@@ -39,7 +40,7 @@ tr:nth-child(even):not(.header):not(.aux):not(.frontPage) {
 
 tr:nth-child(odd):not(.year):not(.aux):not(.frontPage):not(.header) {
   background-color: #fff1d8;
-  //background-color: #fff5e0;
+  /* background-color: #fff5e0; */
 }
 
 h2 {
