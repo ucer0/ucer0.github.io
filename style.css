@@ -18,6 +18,7 @@ table {
 }
 
 th, td {
+  max-width: 200px;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 5px;
