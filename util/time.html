@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>santi.moe</title>
+  <link rel="stylesheet" type="text/css" href="../style.css"/>
+  <link rel="icon" type="image/x-icon" href="res/favicon2.png">
+</head>
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+</style>
+<body>
+
+<div class="index">
+  <h2><a href="../index.html">santi.moe</a></h2>
+</div>
+
+<form method="post">
+  <textarea name="time" id="time" cols="25" rows="20"></textarea>
+  <input type="button" value="Calcular Horas" onclick="getTime()">
+  <h2 id="totalTime"></h2>
+</form>
+
+</body>
+<script>
+  function getTime() {
+    const regEx = /([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]/g;
+    const lines = document.getElementById("time").value.split('\n');
+    let totalTime = 0;
+    lines.forEach((element) => {
+      let arr = [...element.matchAll(regEx)];
+      if (arr.length > 0) {
+        let isNextDay = (arr[0][1] > arr[1][1]) ? true : false;
+        let time1 = strToDate(arr[0][0], false);
+        let time2 = strToDate(arr[1][0], isNextDay);
+        let hours = time2 - time1;
+        totalTime += hours;
+      }
+    });
+    document.getElementById("totalTime").innerText = timeToReadable(totalTime);
+  }
+
+  function strToDate(time, nextDay) {
+    let day = nextDay ? "2" : "1";
+    return new Date("1970-01-0"+day+"T"+time+":00");
+  }
+
+  function timeToReadable(timeMilis) {
+    let diffDays = Math.floor((timeMilis / 86400000)); // days
+    let diffHrs = Math.floor((timeMilis % 86400000) / 3600000); // hours
+    let diffMins = Math.round(((timeMilis % 86400000) % 3600000) / 60000); // minutes
+    diffHrs += diffDays*24;
+    return diffHrs+"h "+diffMins+"m\n";
+  }
+</script>
+</html>
